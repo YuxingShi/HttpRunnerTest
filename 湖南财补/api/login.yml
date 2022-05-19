@@ -38,8 +38,8 @@ teststeps:
             _: '1652844797525'
         url: /hncb/sys/encrypt/rsaPublicKey
     extract:
-        publickey: "body.data.key"
-        rsakeymod: "body.data.rsaKeyMod"
+        publickey: body.data.key
+        rsakeymod: body.data.rsaKeyMod
     validate:
     -   eq:
         - status_code
@@ -59,8 +59,8 @@ teststeps:
             data: '{"userCode":"$user_code","passwd":"${rsa_passwd($password, $rsakeymod)}","key":"$publickey","verifyCode":"$verify_code","verifyKey":"$verify_key","original_jsp":"","signed_data":"","errorcode":"","errormsg":""}'
         url: /hncb/sys/user/login
     extract:
-        auth_token: "body.data.authToken"
-        user_code: "body.data.userCode"
+        auth_token: body.data.authToken
+        user_code: body.data.userCode
     validate:
     -   eq:
         - status_code
@@ -68,6 +68,6 @@ teststeps:
     -   eq:
         - headers.Content-Type
         - text/plain;charset=UTF-8
-    -   eq: ["body.code", 1]
-    -   eq: ["body.data.userCode", "$user_code"]
-    -   eq: ["body.desc", "success"]
+    -   eq: [body.code, 1]
+    -   eq: [body.data.userCode, $user_code]
+    -   eq: [ssbody.desc, success]
