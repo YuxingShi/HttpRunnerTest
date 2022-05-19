@@ -1,0 +1,35 @@
+config:
+    name: 获取工作流
+    base_url: ${ENV(BASE_URL)}
+    variables: {}
+teststeps:
+-   name: 登录系统
+    variables: {}
+    testcase: testcases/login1.yml
+    export: [auth_token, user_code]
+
+-   name: /hncb/api/flflow/qryFlowByCondition
+    request:
+        headers:
+            Authorization: Bearer $auth_token
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+            dbSchema: county430205
+            opUser: $user_code
+            partitionCode: P1_SERVICE
+            serviceCheckCode: df36919186eefc8e6a29005a2367c984
+            tenantId: '430205'
+        method: GET
+        params:
+            data: '{"startdate":"2022-01-01","enddate":"2022-12-31","userid":"20200610102606808_1B4324D9A89B4CDEB0BAC2044CC674B5","categorycode":"430205"}'
+            t: '1652944329'
+        url: /hncb/api/flflow/qryFlowByCondition
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq: [body.code, 1]
+    -   eq: [body.desc, success]

@@ -1,0 +1,56 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: request with functions
+    variables: {}
+    testcase: testcases/test_login.yml
+-   name: /EmpMgr/hz
+    request:
+        headers:
+            DNT: '1'
+            User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64;
+                Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR
+                3.0.30729; .NET4.0C; .NET4.0E)
+        method: GET
+        params:
+            method: add
+            opIdChain: 6DC1AB659D941035ED8DC0BDF1A2FC13_A9EAF53F4C18942BDED8541C809D553F
+            windowID: 74EF04A8F0FD93D139EC2CBF09391FDA
+        url: http://10.168.6.3:6222/EmpMgr/hz
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/html;charset=GBK
+    -   eq: ["${page_element_exist(span, 学员基本信息, $response)}", True]
+    -   eq: ["${page_element_exist(td, 建档单位, $response)}", True]
+    -   eq: ["${page_element_exist(td, 姓名, $response)}", True]
+    -   eq: ["${page_element_exist(td, 身份证号码, $response)}", True]
+    -   eq: ["${page_element_exist(td, 指纹, $response)}", True]
+    -   eq: ["${page_element_exist(td, 性别, $response)}", True]
+    -   eq: ["${page_element_exist(td, 出生日期, $response)}", True]
+    -   eq: ["${page_element_exist(td, 文化程度, $response)}", True]
+    -   eq: ["${page_element_exist(td, 身份证头像, $response)}", True]
+    -   eq: ["${page_element_exist(td, 籍贯, $response)}", True]
+    -   eq: ["${page_element_exist(td, 民族, $response)}", True]
+    -   eq: ["${page_element_exist(td, 身份证地址, $response)}", True]
+    -   eq: ["${page_element_exist(td, 居住证住址, $response)}", True]
+    -   eq: ["${page_element_exist(td, 工作单位, $response)}", True]
+    -   eq: ["${page_element_exist(td, 单位电话, $response)}", True]
+    -   eq: ["${page_element_exist(td, 邮政编码, $response)}", True]
+    -   eq: ["${page_element_exist(td, 电子邮件, $response)}", True]
+    -   eq: ["${page_element_exist(td, 是否外籍人员, $response)}", True]
+    -   eq: ["${page_element_exist(td, 技术职称, $response)}", True]
+    -   eq: ["${page_element_exist(td, 健康状况, $response)}", True]
+    -   eq: ["${page_element_exist(td, 从业状态, $response)}", True]
+    -   eq: ["${page_element_exist(td, 备注, $response)}", True]
+    -   eq: ["${page_element_exist(td, 从业状态, $response)}", True]
+    -   eq: ["${page_element_exist(td, 驾驶资格信息, $response)}", True]
+    -   eq: ["${page_element_exist(td, 驾驶证号, $response)}", True]
+    -   eq: ["${page_element_exist(td, 驾驶证准驾车型, $response)}", True]
+    -   eq: ["${page_element_exist(td, 初领驾驶证日期, $response)}", True]
+    -   eq: ["${page_element_exist(td, 驾驶证有效期从, $response)}", True]
+    -   eq: ["${page_element_exist(td, 至, $response)}", True]

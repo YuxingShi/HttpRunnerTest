@@ -1,0 +1,103 @@
+{
+  "uid" : "f97ad35bc0371965",
+  "name" : "login",
+  "fullName" : "testcases.test_student_apply_test.TestLogin#test_start",
+  "historyId" : "f619be5abb1d929313aacf60b51babfe",
+  "time" : {
+    "start" : 1652931024017,
+    "stop" : 1652931024207,
+    "duration" : 190
+  },
+  "description" : "TestCase ID: 500c0e57-31f2-4c9d-a6c1-39eeff6a924d",
+  "descriptionHtml" : "<p>TestCase ID: 500c0e57-31f2-4c9d-a6c1-39eeff6a924d</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "TestCase ID: 500c0e57-31f2-4c9d-a6c1-39eeff6a924d",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "step: 双考评员登录",
+      "time" : {
+        "start" : 1652931024021,
+        "stop" : 1652931024039,
+        "duration" : 18
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "step: 登录",
+      "time" : {
+        "start" : 1652931024039,
+        "stop" : 1652931024207,
+        "duration" : 168
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases"
+  }, {
+    "name" : "suite",
+    "value" : "test_student_apply_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "USER-20191015PQ"
+  }, {
+    "name" : "thread",
+    "value" : "15152-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.test_student_apply_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f97ad35bc0371965.json",
+  "parameterValues" : [ ]
+}

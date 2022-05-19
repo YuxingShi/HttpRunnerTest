@@ -1,0 +1,103 @@
+{
+  "uid" : "d4d165faff001c81",
+  "name" : "login",
+  "fullName" : "testcases.test_student_create_page_element_check_test.TestLogin#test_start",
+  "historyId" : "6648cf4d194037534b7d38ca423795c0",
+  "time" : {
+    "start" : 1652931024661,
+    "stop" : 1652931024802,
+    "duration" : 141
+  },
+  "description" : "TestCase ID: d2066bb3-2489-4273-b18f-6233ed655c20",
+  "descriptionHtml" : "<p>TestCase ID: d2066bb3-2489-4273-b18f-6233ed655c20</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "TestCase ID: d2066bb3-2489-4273-b18f-6233ed655c20",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "step: 双考评员登录",
+      "time" : {
+        "start" : 1652931024664,
+        "stop" : 1652931024684,
+        "duration" : 20
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "step: 登录",
+      "time" : {
+        "start" : 1652931024684,
+        "stop" : 1652931024801,
+        "duration" : 117
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 2,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases"
+  }, {
+    "name" : "suite",
+    "value" : "test_student_create_page_element_check_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "USER-20191015PQ"
+  }, {
+    "name" : "thread",
+    "value" : "15152-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.test_student_create_page_element_check_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d4d165faff001c81.json",
+  "parameterValues" : [ ]
+}

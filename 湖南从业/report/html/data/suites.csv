@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu May 19 11:30:24 CST 2022","Thu May 19 11:30:25 CST 2022","223","testcases","test_student_create_page_element_check_test","TestCaseTestStudentCreatePageElementCheck","","","testcase description","TestCase ID: 3a6751b2-5cd6-47e3-92b7-9e70101862eb"
+"passed","Thu May 19 11:30:24 CST 2022","Thu May 19 11:30:24 CST 2022","141","testcases","test_student_create_page_element_check_test","TestLogin","","","login","TestCase ID: d2066bb3-2489-4273-b18f-6233ed655c20"
+"passed","Thu May 19 11:30:24 CST 2022","Thu May 19 11:30:24 CST 2022","190","testcases","test_student_apply_test","TestLogin","","","login","TestCase ID: 500c0e57-31f2-4c9d-a6c1-39eeff6a924d"
+"passed","Thu May 19 11:30:23 CST 2022","Thu May 19 11:30:24 CST 2022","172","testcases","test_login_test","TestCaseTestLogin","","","login","TestCase ID: ca10f320-95ea-4702-a4a8-6b81ac9ffb83"
+"passed","Thu May 19 11:30:24 CST 2022","Thu May 19 11:30:24 CST 2022","449","testcases","test_student_apply_test","TestCaseTestStudentApply","","","学员报名","TestCase ID: 16dd26cb-13a6-4751-8b2f-2ff166c310fc"

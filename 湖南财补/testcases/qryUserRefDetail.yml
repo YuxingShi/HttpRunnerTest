@@ -1,0 +1,35 @@
+config:
+    name: 查询用户关联信息
+    base_url: ${ENV(BASE_URL)}
+    variables:
+      {}
+        
+teststeps:
+-   name: 登录系统
+    variables: {}
+    testcase: testcases/login1.yml
+    export: [auth_token, user_code]
+-   name: 查询用户关联信息
+    request:
+        headers:
+            Authorization: Bearer $auth_token
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36
+            opUser: "$user_code"
+            serviceCheckCode: ''
+        method: GET
+        params:
+            data: '{"userCode":"$user_code"}'
+            t: '1652844803'
+        url: /hncb/sys/user/qryUserRefDetail
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq: ["body.code", 1]
+    -   eq: ["body.desc", "success"]
+    -   eq: ["body.data.userInfo.userName", "炎陵县测试"]
+    -   eq: ["body.data.userInfo.userCode", "$user_code"]

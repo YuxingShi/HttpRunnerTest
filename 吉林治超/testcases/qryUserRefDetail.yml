@@ -1,0 +1,31 @@
+config:
+    name: 查询用户关联信息
+    base_url: http://10.168.1.180
+    variables: {}
+teststeps:
+-   name: 登录系统
+    testcase: testcases/login1.yml
+    export: [ authToken, userCode, userName ]
+
+-   name: 查询用户关联信息
+    request:
+        headers:
+            Authorization: Bearer $authToken
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+            agentUser: $userCode
+            agentUserName: ${string_encode($userName)}
+            opUser: $userCode
+            opUserName: ${string_encode($userName)}
+        method: GET
+        params:
+            data: '{"userCode":"$userCode"}'
+            t: '1652930207'
+        url: /serv/sysrest/sys/user/qryUserRefDetail
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq: ["body.code",1]
+    -   eq: ["body.desc","success"]
+    -   eq: ["body.data.userInfo.userCode","$userCode"]

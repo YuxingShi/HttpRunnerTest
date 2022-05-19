@@ -1,0 +1,126 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "testcases",
+    "children" : [ {
+      "name" : "test_login_test",
+      "children" : [ {
+        "name" : "TestCaseTestLogin",
+        "children" : [ {
+          "name" : "login",
+          "uid" : "38b0661717294e11",
+          "parentUid" : "f810b0fda63ec56ca4bbf460444c61bf",
+          "status" : "passed",
+          "time" : {
+            "start" : 1652931023842,
+            "stop" : 1652931024014,
+            "duration" : 172
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "f810b0fda63ec56ca4bbf460444c61bf"
+      } ],
+      "uid" : "46ff1afd175424146a37c74d061a343c"
+    }, {
+      "name" : "test_student_apply_test",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "login",
+          "uid" : "f97ad35bc0371965",
+          "parentUid" : "791f62f0a72a176a8466211ada506395",
+          "status" : "passed",
+          "time" : {
+            "start" : 1652931024017,
+            "stop" : 1652931024207,
+            "duration" : 190
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "791f62f0a72a176a8466211ada506395"
+      }, {
+        "name" : "TestCaseTestStudentApply",
+        "children" : [ {
+          "name" : "学员报名",
+          "uid" : "e0bf85e9e90ce987",
+          "parentUid" : "e5458791ed32578b7ef06578b7349be3",
+          "status" : "passed",
+          "time" : {
+            "start" : 1652931024210,
+            "stop" : 1652931024659,
+            "duration" : 449
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "e5458791ed32578b7ef06578b7349be3"
+      } ],
+      "uid" : "e1717896c9642a1be51e5b0236cead5a"
+    }, {
+      "name" : "test_student_create_page_element_check_test",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "login",
+          "uid" : "d4d165faff001c81",
+          "parentUid" : "5c4a9bc80ab177f0da03d13ae343e184",
+          "status" : "passed",
+          "time" : {
+            "start" : 1652931024661,
+            "stop" : 1652931024802,
+            "duration" : 141
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "5c4a9bc80ab177f0da03d13ae343e184"
+      }, {
+        "name" : "TestCaseTestStudentCreatePageElementCheck",
+        "children" : [ {
+          "name" : "testcase description",
+          "uid" : "a30d43eb762fc7cb",
+          "parentUid" : "6c803f7da03774b007430562c9d78a9b",
+          "status" : "passed",
+          "time" : {
+            "start" : 1652931024804,
+            "stop" : 1652931025027,
+            "duration" : 223
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "newPassed" : false,
+          "newBroken" : false,
+          "retriesCount" : 0,
+          "retriesStatusChange" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "6c803f7da03774b007430562c9d78a9b"
+      } ],
+      "uid" : "433511cef799c21d1e58daf584472a43"
+    } ],
+    "uid" : "b51346658ccdb9db01a6b5f6c12deab1"
+  } ]
+}

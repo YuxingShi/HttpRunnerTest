@@ -1,0 +1,83 @@
+config:
+    name: 系统登录
+    base_url: http://10.168.1.180:80
+    variables: 
+        user_code: "ccuser3"
+        password: "666666"
+        user_name: "长春测试三"
+    export: [authToken, userCode, userName]
+teststeps:
+-   name: 获取验证码
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+            instanceFlag: ''
+        method: GET
+        params:
+            _: '1652845062414'
+        url: /serv/sysrest/sys/encrypt/verifyCode
+    extract:
+        verifyCode: body.data.code
+        verifyKey: body.data.key
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq: ["body.code", 1]
+    -   eq: ["body.desc", "success"]
+-   name: 获取公钥
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+            instanceFlag: ''
+            opUser: 'null'
+        method: GET
+        params:
+            _: '1652845062416'
+        url: /serv/sysrest/sys/encrypt/publicKey
+    extract:
+       key: "body.data.key"
+       publicKey: "body.data.publicKey"
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq: ["body.code", 1]
+    -   eq: ["body.desc", "success"]
+-   name: 登录
+    request:
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+            instanceFlag: ''
+        method: GET
+        params:
+            _: '1652845062417'
+            data: '{"userCode":"$user_code","passwd":"${sm2_password($password, $publicKey)}","key":"$key","verifyCode":"$verifyCode","verifyKey":"$verifyKey"}'
+        url: /serv/sysrest/sys/user/login
+    extract:
+        authToken: body.data.authToken
+        userCode: body.data.userCode
+        userName: body.data.userName
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq: ["body.code", 1]
+    -   eq: ["body.desc", "success"]
+    -   eq: ["body.data.userCode", "$user_code"]
+    -   eq: ["body.data.userName", "$user_name"]

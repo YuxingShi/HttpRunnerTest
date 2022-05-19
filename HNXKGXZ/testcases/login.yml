@@ -1,0 +1,97 @@
+config:
+    name: 系统登录
+    base_url: http://10.168.7.76:8000
+    variables: 
+        user_code: "testxkg"
+        password: "666666"
+        user_name: "游芬"
+    export: [authToken, userCode, userName]
+teststeps:
+-   name: 获取验证码
+    request:
+        data: ''
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+            instanceFlag: ''
+        method: POST
+        url: /serv/crtsysrest/sys/encrypt/verifyCode
+    extract:
+        verifyCode: body.data.code
+        verifyKey: body.data.key
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq:
+        - content.code
+        - 1
+    -   eq:
+        - content.desc
+        - success
+-   name: 获取公钥
+    request:
+        data: ''
+        headers:
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+            instanceFlag: ''
+            opUser: 'null'
+        method: POST
+        url: /serv/crtsysrest/sys/encrypt/publicKey
+    extract:
+       key: body.data.key
+       publicKey: body.data.publicKey
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq:
+        - content.code
+        - 1
+    -   eq:
+        - content.desc
+        - success
+-   name: 登录
+    request:
+        headers:
+            Content-Type: application/json;charset=UTF-8
+            User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36
+            X-Requested-With: XMLHttpRequest
+        json:
+            key: $key
+            login_type: loginname
+            passwd: ${sm2_password($password, $publicKey)}
+            userCode: $user_code
+            verifyCode: $verifyCode
+            verifyKey: $verifyKey
+        method: POST
+        url: /serv/crtsysrest/sys/user/login
+    extract:
+        authToken: body.data.authToken
+        userCode: body.data.userCode
+        userName: body.data.userName
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - headers.Content-Type
+        - text/plain;charset=UTF-8
+    -   eq:
+        - content.code
+        - 1
+    -   eq:
+        - content.desc
+        - success
+    -   eq: [body.data.userCode, $user_code]
+    -   eq: [body.data.userName, $user_name]

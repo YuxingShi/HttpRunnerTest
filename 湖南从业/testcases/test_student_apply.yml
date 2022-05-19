@@ -1,0 +1,64 @@
+config:
+  name: 学员报名
+  base_url: http://10.168.6.3:6222
+  variables: { }
+teststeps:
+  - name: 登录
+    variables: { }
+    testcase: testcases/test_login.yml
+
+  - name: 已报名学员报名提交
+    variables:
+      up_data: ${get_xml_body(testcases/已报名学员.xml)}
+    teardown_hooks:
+      - ${teardown_hook_xml_json($response)}
+    request:
+      data: $up_data
+      headers:
+        Content-Type: text/xml; charset=GBK
+        DNT: '1'
+        User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64;
+          Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR
+          3.0.30729; .NET4.0C; .NET4.0E)
+      method: POST
+      params:
+        style: new
+        tier: business
+      url: /EmpMgr/Ajax2Servlet
+    validate:
+      - eq:
+          - status_code
+          - 200
+      - eq:
+          - headers.Content-Type
+          - text/xml;charset=UTF-8
+      - eq: [ body.output.head.retCode, "-1" ]
+      - eq: [ body.output.head.retDesc, "该学员已报名了[经营性道路旅客运输驾驶员]在经纬机动车驾驶员培训学校，未通过考试" ]
+
+  - name: 新学员报名提交
+    variables:
+      up_data: ${get_xml_body(testcases/新学员报名.xml)}
+    teardown_hooks:
+      - ${teardown_hook_xml_json($response)}
+    request:
+      data: $up_data
+      headers:
+        Content-Type: text/xml; charset=GBK
+        DNT: '1'
+        User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64;
+          Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR
+          3.0.30729; .NET4.0C; .NET4.0E)
+      method: POST
+      params:
+        style: new
+        tier: business
+      url: /EmpMgr/Ajax2Servlet
+    validate:
+      - eq:
+          - status_code
+          - 200
+      - eq:
+          - headers.Content-Type
+          - text/xml;charset=UTF-8
+      - eq: [ body.output.head.retCode, "0" ]
+      - eq: [ body.output.head.retDesc, "报名成功" ]

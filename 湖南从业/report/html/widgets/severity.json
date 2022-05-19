@@ -1,0 +1,51 @@
+[ {
+  "uid" : "e0bf85e9e90ce987",
+  "name" : "学员报名",
+  "time" : {
+    "start" : 1652931024210,
+    "stop" : 1652931024659,
+    "duration" : 449
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a30d43eb762fc7cb",
+  "name" : "testcase description",
+  "time" : {
+    "start" : 1652931024804,
+    "stop" : 1652931025027,
+    "duration" : 223
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f97ad35bc0371965",
+  "name" : "login",
+  "time" : {
+    "start" : 1652931024017,
+    "stop" : 1652931024207,
+    "duration" : 190
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "38b0661717294e11",
+  "name" : "login",
+  "time" : {
+    "start" : 1652931023842,
+    "stop" : 1652931024014,
+    "duration" : 172
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d4d165faff001c81",
+  "name" : "login",
+  "time" : {
+    "start" : 1652931024661,
+    "stop" : 1652931024802,
+    "duration" : 141
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

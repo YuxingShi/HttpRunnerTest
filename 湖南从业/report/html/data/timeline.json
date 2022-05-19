@@ -1,0 +1,98 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "USER-20191015PQ",
+    "children" : [ {
+      "name" : "15152-MainThread",
+      "children" : [ {
+        "name" : "login",
+        "uid" : "d4d165faff001c81",
+        "parentUid" : "b85ac8c2773732dafa7000a73eb3cc74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652931024661,
+          "stop" : 1652931024802,
+          "duration" : 141
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "学员报名",
+        "uid" : "e0bf85e9e90ce987",
+        "parentUid" : "b85ac8c2773732dafa7000a73eb3cc74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652931024210,
+          "stop" : 1652931024659,
+          "duration" : 449
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login",
+        "uid" : "38b0661717294e11",
+        "parentUid" : "b85ac8c2773732dafa7000a73eb3cc74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652931023842,
+          "stop" : 1652931024014,
+          "duration" : 172
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "login",
+        "uid" : "f97ad35bc0371965",
+        "parentUid" : "b85ac8c2773732dafa7000a73eb3cc74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652931024017,
+          "stop" : 1652931024207,
+          "duration" : 190
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "testcase description",
+        "uid" : "a30d43eb762fc7cb",
+        "parentUid" : "b85ac8c2773732dafa7000a73eb3cc74",
+        "status" : "passed",
+        "time" : {
+          "start" : 1652931024804,
+          "stop" : 1652931025027,
+          "duration" : 223
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b85ac8c2773732dafa7000a73eb3cc74"
+    } ],
+    "uid" : "bdd6371ca058efe8fe8806cdb508b971"
+  } ]
+}

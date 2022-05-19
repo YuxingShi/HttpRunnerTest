@@ -1,0 +1,133 @@
+{
+  "uid" : "a30d43eb762fc7cb",
+  "name" : "testcase description",
+  "fullName" : "testcases.test_student_create_page_element_check_test.TestCaseTestStudentCreatePageElementCheck#test_start",
+  "historyId" : "ed7fc5b60dfdab3af9eadc447cf0602c",
+  "time" : {
+    "start" : 1652931024804,
+    "stop" : 1652931025027,
+    "duration" : 223
+  },
+  "description" : "TestCase ID: 3a6751b2-5cd6-47e3-92b7-9e70101862eb",
+  "descriptionHtml" : "<p>TestCase ID: 3a6751b2-5cd6-47e3-92b7-9e70101862eb</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "TestCase ID: 3a6751b2-5cd6-47e3-92b7-9e70101862eb",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "step: 登录",
+      "time" : {
+        "start" : 1652931024807,
+        "stop" : 1652931024953,
+        "duration" : 146
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "step: 双考评员登录",
+        "time" : {
+          "start" : 1652931024808,
+          "stop" : 1652931024826,
+          "duration" : 18
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      }, {
+        "name" : "step: 登录",
+        "time" : {
+          "start" : 1652931024826,
+          "stop" : 1652931024953,
+          "duration" : 127
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "hasContent" : false,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "hasContent" : true,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    }, {
+      "name" : "step: 学员建档页面元素校验",
+      "time" : {
+        "start" : 1652931024953,
+        "stop" : 1652931025027,
+        "duration" : 74
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "hasContent" : false,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "hasContent" : true,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "testcases"
+  }, {
+    "name" : "suite",
+    "value" : "test_student_create_page_element_check_test"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestCaseTestStudentCreatePageElementCheck"
+  }, {
+    "name" : "host",
+    "value" : "USER-20191015PQ"
+  }, {
+    "name" : "thread",
+    "value" : "15152-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "testcases.test_student_create_page_element_check_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a30d43eb762fc7cb.json",
+  "parameterValues" : [ ]
+}
